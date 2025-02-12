@@ -13,4 +13,5 @@ class StringConst{
   static const String currentEmployee =  "Current Employees";
   static const String swipeLeftToDelete =  "Swipe left to delete";
   static const String addEmployeeDetails =  "Add Employee Details";
+  static const String editEmployeeDetails =  "Edit Employee Details";
 }

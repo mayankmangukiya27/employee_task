@@ -39,7 +39,7 @@ dependencies:
   table_calendar: ^3.2.0
   intl:
   flutter_slidable: ^4.0.0
-  sqflite_common_ffi_web: ^0.4.5+4
+
 
 dev_dependencies:
   flutter_test:

@@ -7,8 +7,6 @@ import 'package:employee_app/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
-
 class AddEmployeeScreen extends StatefulWidget {
   final Employee? employee;
 
@@ -31,7 +29,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(StringConst.addEmployeeDetails),
+        title: Text(widget.employee!=null? StringConst.editEmployeeDetails: StringConst.addEmployeeDetails),
         actions: [
           widget.employee != null
               ? InkWell(
@@ -147,7 +145,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
   Widget _bottomView(context) {
     final employeeCubit = BlocProvider.of<AddEmployeeCubit>(context);
     return SizedBox(
-      height: 60,
+      height: 75,
       child: Column(
         children: [
           Container(
@@ -186,10 +184,13 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
                 color: ColorConstants.primary,
               ),
               SizedBox(
-                width: 10,
+                width: 20,
               ),
             ],
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );
